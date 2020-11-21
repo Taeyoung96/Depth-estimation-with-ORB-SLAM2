@@ -11,7 +11,8 @@
 
 - [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) 구동을 통한 Visual SLAM의 구조를 이해해 보고 싶었습니다.  
   최근 Mono depth estimation 관련 연구 및 논문들이 많이 나온 상태에서,  
-  실제 센서에서 나온 Depth data 대신에 Depth estimation model을 이용해 구한 Depth data를 이용하여  
+  실제 센서에서 나온 Depth data 대신에  
+  Depth estimation model을 이용해 구한 Depth data를 이용하여  
   SLAM에 적용하면 어떤 성능이 나오는지 궁금하였습니다.  
 
 ## 프로젝트 개요
@@ -30,7 +31,7 @@
 - 대부분 소스코드는 ORB-SLAM2와 동일  
 - `/Examples/Monocular/mono_tum.cc` : 조건부 컴파일 '#ifdef'를 이용하여 웹캠을 이용할 때와 Sequence 파일을 이용할 때 두 가지 Mode로 구동.  
 - `/Examples/RGB-D/rgbd_tum.cc` : 조건부 컴파일 '#ifdef'를 이용하여 'Realsense D435'을 이용할 때와 Sequence 파일을 이용할 때 두 가지 Mode로 구동.  
-- `datasets/Depth-prediction-dataset/` : Depth prediction model을 이용하여 구한 Depth data와 그에 맞는 `associations.txt`
+- `datasets/Depth-prediction-dataset/` : Depth prediction model을 이용하여 구한 Depth data와 그에 맞는 `associations.txt`이 존재.
 
 ### Project scenario
 
@@ -39,17 +40,17 @@
 3. 만약 단일 카메라를 이용하여 'Real time Monocular Mode' 프로젝트를 실행하고 싶을 경우,  
     `/Examples/Monocular/mono_tum.cc`에 `#define UsingWebCam`을 활성화하고,  
     터미널 창에 `sh. build.sh`를 입력합니다.  
-    빌드가 끝나면 터미널 창에 `hi`를 입력합니다.
+    빌드가 끝나면 터미널 창에 `./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt ./Examples/Monocular/d435.yaml`를 입력합니다.
     
-4. 만약 Realsense D435를 이용하여 'Real time RGB-D Mode' 프로젝트를 실행하고 싶을 경우,
+4. 만약 Realsense D435를 이용하여 'Real time RGB-D Mode' 프로젝트를 실행하고 싶을 경우,  
     `/Examples/RGB-D/rgbd_tum.cc`에 `#define UsingWebCam`을 활성화하고,  
     터미널 창에 `sh. build.sh`를 입력합니다.  
-    빌드가 끝나면 터미널 창에 `hi`를 입력합니다.
+    빌드가 끝나면 터미널 창에 `./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt ./Examples/RGB-D/d435.yaml`를 입력합니다.
 
 5. 만약 Depth prediction Sequence를 이용하여 ORB-SLAM2를 실행하고 싶을 경우,  
     `/Examples/RGB-D/rgbd_tum.cc`에 `#define UsingWebCam`을 비활성화하고(주석 처리),  
     터미널 창에 `sh. build.sh`를 입력합니다.  
-    빌드가 끝나면 터미널 창에 `hi`를 입력합니다.
+    빌드가 끝나면 터미널 창에 `./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1_deep.yaml datasets/Depth-prediction-dataset/ /datasets/Depth-prediction-dataset/associations.txt`를 입력합니다.
 
 ## 프로젝트 결과
 
