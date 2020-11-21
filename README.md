@@ -9,8 +9,8 @@
 4. 실제 센서 값에서 얻은 Depth Data와 비슷한 수치를 얻기 위해서 Normalization 작업을 통해 실제 Depth data와 비슷한 값을 얻음.
 
 ## System Architecture
-그림을 올리는 방법 
-[깃허브 README.md 파일에 이미지 업로드 하기](https://hanee24.github.io/2017/12/21/how-to-upload-image-with-github-readme/)를 참고해서 올려주세요.
+<p align="center"><img src="https://user-images.githubusercontent.com/41863759/99869659-2104e580-2c10-11eb-9ebf-ae5fa683d77c.png" width="500px"></p>  
+
 
 ### Code Overview  
 - `소스코드1` : 이것을 의미합니다.
