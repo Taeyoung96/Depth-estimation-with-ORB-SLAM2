@@ -9,7 +9,7 @@
 4. 실제 센서 값에서 얻은 Depth Data와 비슷한 수치를 얻기 위해서 Normalization 작업을 통해 실제 Depth data와 비슷한 값을 얻음.
 
 ## System Architecture
-<p align="center"><img src="https://user-images.githubusercontent.com/41863759/99869659-2104e580-2c10-11eb-9ebf-ae5fa683d77c.png" width="500px"></p>  
+<p align="center"><img src="https://user-images.githubusercontent.com/41863759/99869659-2104e580-2c10-11eb-9ebf-ae5fa683d77c.png" width="600px"></p>  
 
 
 ### Code Overview  
