@@ -5,8 +5,10 @@
 ## 프로젝트 개요
 1. [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) 코드를 웹캠으로 돌릴 수 있도록 변경.  
 2. [Sequence 'freiburg1_xyz'](https://vision.in.tum.de/data/datasets/rgbd-dataset/download#freiburg1_xyz) Dataset을 이용하여 ORB-SLAM2 구동.  
-3. 'Monocular Depth Estimation with Transfer Learning pretrained MobileNetV2'([Github](https://github.com/alinstein/Depth_estimation))를 이용하여 RGB Image Sequence에서 Depth Prediction Sequence를 얻음.  
+3. 'Monocular Depth Estimation with Transfer Learning pretrained MobileNetV2'([Github](https://github.com/alinstein/Depth_estimation))를 이용하여 RGB Image Sequence에서 Depth Prediction Sequence를 얻음. (Colormap = 'gist_yrag' 사용) 
 4. 실제 센서 값에서 얻은 Depth Data와 비슷한 수치를 얻기 위해서 Normalization 작업을 통해 실제 Depth data와 비슷한 값을 얻음.
+> - [Matching-timestamp-and-Image](https://github.com/Taeyoung96/Matching-timestamp-and-Image) : Timestamp 값과 Image Sequence를 매칭시켜주기 위해 사용.
+> - [Image-Min-Max-Normalization](https://github.com/Taeyoung96/Image-Min-Max-Normalization) : 실제 Depth 값과 비슷한 수치를 갖도록 Normalization을 위해 사용.
 
 ## System Architecture
 <p align="center"><img src="https://user-images.githubusercontent.com/41863759/99869659-2104e580-2c10-11eb-9ebf-ae5fa683d77c.png" width="600px"></p>  
