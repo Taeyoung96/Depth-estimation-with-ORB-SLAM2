@@ -1,6 +1,18 @@
 # Depth estimation with ORB-SLAM2
 
-광운대학교 학술소모임 BARAM 20년도 후반기 Toy Project에 대한 소스코드입니다.  
+광운대학교 로봇학부 학술소모임 **'BARAM'** 20년도 후반기 Toy Project에 대한 소스코드입니다.  
+
+## 개발 환경
+|OS|사용 언어|사용 IDE|
+|:---:|:---:|:---:|
+|Ubuntu 18.04|C++|Qt Creator|
+
+## 프로젝트 개발 동기
+
+- [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) 구동을 통한 Visual SLAM의 구조를 이해해 보고 싶었습니다.  
+  최근 Mono depth estimation 관련 연구 및 논문들이 많이 나온 상태에서,  
+  실제 센서에서 나온 Depth data 대신에 Depth estimation model을 이용해 구한 Depth data를 이용하여  
+  SLAM에 적용하면 어떤 성능이 나오는지 궁금하였습니다.  
 
 ## 프로젝트 개요
 1. [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) 코드를 웹캠으로 돌릴 수 있도록 변경.  
@@ -15,15 +27,29 @@
 
 
 ### Code Overview  
-- `소스코드1` : 이것을 의미합니다.
-- `소스코드2` : 이것도 의미하구요.
-- `소스코드3` : 저것도 의미합니다.
+- 대부분 소스코드는 ORB-SLAM2와 동일  
+- `/Examples/Monocular/mono_tum.cc` : 조건부 컴파일 '#ifdef'를 이용하여 웹캠을 이용할 때와 Sequence 파일을 이용할 때 두 가지 Mode로 구동.  
+- `/Examples/RGB-D/rgbd_tum.cc` : 조건부 컴파일 '#ifdef'를 이용하여 'Realsense D435'을 이용할 때와 Sequence 파일을 이용할 때 두 가지 Mode로 구동.  
+- `datasets/Depth-prediction-dataset/` : Depth prediction model을 이용하여 구한 Depth data와 그에 맞는 `associations.txt`
 
 ### Project scenario
 
-1. 처음에 이거하고  
-2. 두번째 저거하고  
-3. 세번째 이거합니다. 여기 사진 넣어줘도 좋겠죠?  
+1. [블로그에 쓴거]를 참고하여 개발환경을 Setting 해줍니다.  
+2. 터미널에서 `cd Depth-estimation-with-ORB-SLAM2`를 입력합니다.
+3. 만약 단일 카메라를 이용하여 'Real time Monocular Mode' 프로젝트를 실행하고 싶을 경우,  
+    `/Examples/Monocular/mono_tum.cc`에 `#define UsingWebCam`을 활성화하고,  
+    터미널 창에 `sh. build.sh`를 입력합니다.  
+    빌드가 끝나면 터미널 창에 `hi`를 입력합니다.
+    
+4. 만약 Realsense D435를 이용하여 'Real time RGB-D Mode' 프로젝트를 실행하고 싶을 경우,
+    `/Examples/RGB-D/rgbd_tum.cc`에 `#define UsingWebCam`을 활성화하고,  
+    터미널 창에 `sh. build.sh`를 입력합니다.  
+    빌드가 끝나면 터미널 창에 `hi`를 입력합니다.
+
+5. 만약 Depth prediction Sequence를 이용하여 ORB-SLAM2를 실행하고 싶을 경우,  
+    `/Examples/RGB-D/rgbd_tum.cc`에 `#define UsingWebCam`을 비활성화하고(주석 처리),  
+    터미널 창에 `sh. build.sh`를 입력합니다.  
+    빌드가 끝나면 터미널 창에 `hi`를 입력합니다.
 
 ## 프로젝트 결과
 
