@@ -35,7 +35,7 @@
 
 ### Project scenario
 
-1. [블로그에 쓴거]를 참고하여 개발환경을 Setting 해줍니다.  
+1. [ORB-SLAM2 with WebCam(Monocular & RGBD)](https://taeyoung96.github.io/tips/ORBwithWeb/)를 참고하여 개발환경을 Setting 해줍니다.  
 2. 터미널에서 `cd Depth-estimation-with-ORB-SLAM2`를 입력합니다.
 3. 만약 단일 카메라를 이용하여 'Real time Monocular Mode' 프로젝트를 실행하고 싶을 경우,  
     `/Examples/Monocular/mono_tum.cc`에 `#define UsingWebCam`을 활성화하고,  
