@@ -1,10 +1,10 @@
-##List of Known Dependencies
-###ORB-SLAM2 version 1.0
+## List of Known Dependencies
+### ORB-SLAM2 version 1.0
 
 In this document we list all the pieces of code included  by ORB-SLAM2 and linked libraries which are not property of the authors of ORB-SLAM2.
 
 
-#####Code in **src** and **include** folders
+##### Code in **src** and **include** folders
 
 * *ORBextractor.cc*.
 This is a modified version of orb.cpp of OpenCV library. The original code is BSD licensed.
@@ -17,7 +17,7 @@ This code can be found in popular BSD licensed computer vision libraries as [Ope
 The code is from: http://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel.
 The code is in the public domain.
 
-#####Code in Thirdparty folder
+##### Code in Thirdparty folder
 
 * All code in **DBoW2** folder.
 This is a modified version of [DBoW2](https://github.com/dorian3d/DBoW2) and [DLib](https://github.com/dorian3d/DLib) library. All files included are BSD licensed.
@@ -25,7 +25,7 @@ This is a modified version of [DBoW2](https://github.com/dorian3d/DBoW2) and [DL
 * All code in **g2o** folder.
 This is a modified version of [g2o](https://github.com/RainerKuemmerle/g2o). All files included are BSD licensed.
 
-#####Library dependencies 
+##### Library dependencies 
 
 * **Pangolin (visualization and user interface)**.
 [MIT license](https://en.wikipedia.org/wiki/MIT_License).
